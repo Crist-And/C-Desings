@@ -1,0 +1,571 @@
+html, body {
+    height: 100%; /* Asegúrate de que ambos tengan altura del 100% */
+    margin: 0; /* Elimina los márgenes predeterminados */
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #dddddd ;
+    /*background: linear-gradient(to bottom, #0C1E1F, #9cbeb0); /* Cambia este valor por el color que prefieras */
+}
+
+/* Estilos para pantallas grandes (desktop) */
+header {
+    background-image: url('fondo1.png');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    text-align: left;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header-content {
+    display: flex;
+    margin-left: 35%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 10%;
+}
+
+h1 {
+    color: white;
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 2.5em;
+    font-style: italic;
+    padding-left: 50px;
+}
+
+.logo {
+    max-width: 100px;
+    margin-top: 20px;
+    padding: 0px;
+}
+
+/* Ajustes para tablets (hasta 768px) */
+@media (max-width: 768px) {
+    header {
+        height: 150px; /* Reducir la altura del header en pantallas medianas */
+    }
+
+    .header-content {
+        flex-direction: column; /* Coloca los elementos uno debajo del otro */
+        margin-left: 0; /* Centra los elementos */
+        gap: 10%; /* Aumenta el espacio entre los elementos */
+    }
+
+    h1 {
+        font-size: 2em; /* Reduce el tamaño de la fuente para pantallas más pequeñas */
+        padding-left: 0px; /* Elimina el padding para centrar el texto */
+        text-align: center; /* Centra el texto */
+    }
+
+    .logo {
+        max-width: 80px; /* Ajusta el tamaño del logo */
+    }
+}
+
+/* Ajustes para móviles (hasta 480px) */
+@media (max-width: 480px) {
+    header {
+        height: 120px; /* Reduce aún más la altura para móviles */
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 15px; /* Espacio menor entre los elementos */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Reduce el tamaño del texto en móviles */
+        text-align: center;
+    }
+
+    .logo {
+        max-width: 60px; /* Ajusta el tamaño del logo para móviles */
+    }
+}
+
+.container { /* Contenedor padre que envuelve el iframe-container */
+    height: 100%; /* Define una altura adecuada para el contenedor padre */
+    display: flex; /* Si deseas que el contenedor sea flex */
+    justify-content: center; /* Centra su contenido si es necesario */
+    align-items: center; /* Centra verticalmente su contenido si es necesario */
+    margin: 0 auto; /* Centra el contenedor padre horizontalmente */
+}
+
+.iframe-container {
+    display: flex;
+    width: 70%;                      /* Ancho del contenedor */
+    height: 100%;                    /* Altura en porcentaje */
+    flex-wrap: wrap;                 /* Permite que los iframes se envuelvan en múltiples líneas */
+    justify-content: center;          /* Centra horizontalmente los iframes dentro del contenedor */
+    gap: 2%;                         /* Espacio entre los iframes */
+    margin: 20px auto;               /* Margen superior e inferior de 20px, y centrar horizontalmente */
+}
+
+.video-iframe {
+    border-radius: 10px;             /* Borde redondeado para el iframe */
+    height: 70%;
+    width: 70%;                      /* Se ajusta al ancho del contenedor */
+    max-width: 300px;                /* Ajusta el ancho máximo según tus necesidades */
+    padding: 1%;                     /* Espaciado interno */
+    height: auto;                    /* Altura automática para mantener la proporción */
+}
+
+
+
+
+  form {
+    max-width: 600px;
+    margin: 40px auto; /* Centrar el formulario */
+    padding: 20px;
+    background-color: #d1d1d1;
+    
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Habilita Flexbox */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    margin-bottom: 150px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end; /* Alinea el botón a la derecha */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+footer {
+    background-image: url('fondo1.png'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: auto; /* Ajusta según sea necesario */
+    padding: 1%;
+    position: relative;
+    font-family: 'Roboto', sans-serif; /* Aplicar la fuente Roboto */
+    display: flex; /* Usar Flexbox para la alineación */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.footer-container {
+    display: flex; /* Usar Flexbox para la lista y el mapa */
+    justify-content: space-between; /* Espacio entre la lista y el mapa */
+    align-items: center; /* Alineación vertical */
+    width: 100%; /* Asegura que ocupe todo el ancho del footer */
+    gap:1%; /* Espacio entre la lista y el mapa */
+}
+
+.footer-container ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0;
+    margin-left: 0px;
+    text-align: left; /* Alinear a la izquierda */
+}
+
+.footer-container ul li {
+    margin-bottom: 20%; /* Espacio entre los ítems */
+}
+
+.footer-container ul li a {
+    color: white; /* Letras blancas */
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.footer-container ul li a:hover {
+    color: #838b83; /* Cambia el color al pasar el mouse */
+}
+
+.map-container {
+    width: 100%; /* Ajusta según sea necesario */
+    max-width: 40%; /* Ajusta según sea necesario */
+    height: 300px; /* Ajusta según sea necesario */
+}
+
+.map-container iframe {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100%; /* Altura completa del contenedor */
+    border: 0; /* Sin borde */
+    border-radius: 10px;
+}
+
+
+
+
+
+/* Estilos generales para pantallas grandes */
+nav {
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo semi-transparente */
+    padding: 5px 10px; /* Espaciado superior e inferior */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    transition: padding 0.3s ease; /* Transición suave en el cambio de altura */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 3%;
+    
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0;
+    border-bottom: 2px solid white;
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Cambia la disposición a vertical */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 15px 0; /* Mayor espacio entre los elementos */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Reduce el tamaño del texto */
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    nav {
+        background-color: rgba(0, 0, 0, 0.8); /* Haz el fondo más oscuro en móviles */
+        padding: 15px;
+    }
+
+    nav ul {
+        display: none; /* Oculta el menú inicialmente */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 100%; /* Posiciona el menú debajo del nav en móviles */
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro cuando el menú se despliega */
+        padding: 20px;
+    }
+
+    .nav-toggle {
+        display: block; /* Mostramos el botón de hamburguesa */
+        cursor: pointer;
+        color: white;
+        font-size: 24px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    /* Mostrar el menú cuando esté activo */
+    nav.active ul {
+        display: flex;
+    }
+}
+
+
+ /* Estilo base para el contenedor de las tarjetas */
+ .card-container {
+    width: 60%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo base para cada tarjeta */
+.card {
+    background-color: #ffffff;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover para agrandar ligeramente la tarjeta */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de la tarjeta */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Contenido de la tarjeta */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 1em;
+}
+
+/* Información oculta que aparece en el hover */
+.card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+/* Mostrar la información oculta al pasar el mouse */
+.card:hover .card-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* Contenedor principal del BUCLE INFINITO */
+.slider-container-2 {
+    width: 100%; /* Ocupa el ancho completo de la página */
+    margin-bottom: 0px;
+    overflow: hidden; /* Oculta las imágenes que salen del contenedor */
+    white-space: nowrap; /* Mantiene todas las imágenes en la misma línea */
+  }
+  
+  /* Slider que contiene las imágenes */
+  .slider-2 {
+    display: inline-flex;
+    animation: slide-2 25s linear infinite; /* Animación continua */
+  }
+  
+  /* Imágenes dentro del slider */
+  .slider-2 img {
+    width: 400px; /* Máximo ancho de 300px */
+    height: 300px; /* Imágenes cuadradas */
+    object-fit: cover; /* Ajusta la imagen para que cubra el espacio sin distorsión */
+  }
+  
+  /* Animación del slider */
+  @keyframes slide-2 {
+    0% {
+      transform: translateX(0); /* Comienza en la primera imagen */
+    }
+    100% {
+      transform: translateX(-50%); /* Mueve el slider hasta la mitad (4 imágenes) */
+    }
+  }
+  
+  
+
+
+
+
+  /* Contenedor principal centrado vertical */
+  .welcome-container {
+    background-color: rgb(231, 225, 225);
+    height: auto; /* altura del contenedor */
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Aplicamos la fuente Spirax a todo el contenedor */
+.welcome-message {
+    max-width: 60%; /* Limita el ancho */
+    margin: 5% 0;
+    text-align: center; /* Centra el texto */
+    font-family: 'Ruda', sans-serif; /* Fuente Ruda */
+    font-size: 2.2rem;
+}
+
+.welcome-message h3 {
+    font-size: 2.2rem;
+    line-height: 1.8;
+    color: rgb(26, 26, 26);
+    font-weight: normal;
+}
+
+/* Estilo del CTA sin fondo */
+.cta a {
+    color: rgb(136, 23, 23); /* Color inicial */
+    text-decoration: none;
+    font-size: 1em;
+    border: none; /* Sin fondo ni bordes */
+    transition: color 0.3s ease; /* Transición de color suave */
+}
+
+.cta a:hover {
+    color: #0d9c5c; /* Cambia a color naranja al hacer hover */
+}
+
+@media (max-width: 768px) {
+    .welcome-message {
+        padding: 20px;
+    }
+
+    .welcome-message h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-message p {
+        font-size: 1rem;
+    }
+}
+
+.services-section {
+    width: 100%;
+    height: auto; /* Cambiar a auto para que se ajuste al contenido */
+    background-color: #16161C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
+    gap: 10rem; /* Espacio entre las tarjetas */
+}
+
+/* Para pantallas pequeñas (tablets y móviles) */
+@media (max-width: 768px) {
+    .services-container {
+        gap: 2rem; /* Reduce el espacio entre tarjetas */
+    }
+    
+    .service-card {
+        width: 80%; /* Aumenta el ancho de las tarjetas */
+        max-width: 300px; /* Limita el ancho máximo */
+    }
+}
+
+/* Para pantallas extra pequeñas (móviles) */
+@media (max-width: 480px) {
+    .services-container {
+        gap: 1rem; /* Menor espacio entre tarjetas */
+    }
+    
+    .service-card {
+        width: 90%; /* Aumenta el ancho en móviles */
+        max-width: 250px; /* Limita el ancho máximo */
+    }
+}
+
+
+.service-card {
+    background-color: rgb(255, 253, 253);
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    flex-wrap: wrap;
+}
+
+.service-card h3 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.service-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #666;
+}
+
+/* Efecto hover para agrandar la tarjeta */
+.service-card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra para dar más profundidad */
+}
+
+
