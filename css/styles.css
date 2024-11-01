@@ -622,7 +622,7 @@ body {
 }
 
 .reviews-header p {
-    font-size: 1.1rem; /* Ajusta el tamaño de la fuente del párrafo */
+    font-size: 1rem; /* Ajusta el tamaño de la fuente del párrafo */
     line-height: 1.5; /* Mejora la legibilidad */
     margin: 0; /* Elimina el margen por defecto del párrafo */
 }
