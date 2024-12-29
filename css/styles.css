@@ -397,7 +397,14 @@ nav ul li a:hover {
 .card:hover .card-info {
     opacity: 1;
     transform: translateY(0);
+    font-weight: bold;
 }
+.card-info .precio::before {
+    content: "$";
+    font-weight: bold;  /* Puedes hacer que el signo sea negrita */
+}
+
+
 
 
 
@@ -684,3 +691,131 @@ body {
         min-height: 150px; /* Ajusta la altura mínima para móviles pequeños */
     }
 }
+
+/* Carrito */
+
+.carrito-container {
+    min-height: 30rem;
+    height: auto; /* Altura del contenedor */
+    width: 80%;
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: flex-start; /* Alinea al inicio verticalmente */
+    padding: 2rem;
+}
+
+.carrito-message h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#carrito-tabla {
+    width: 100%; /* La tabla ocupa el ancho completo */
+    border-collapse: separate;
+    border-spacing: 10rem 0; /* Espaciado entre columnas y filas */
+}
+
+#carrito-tabla td {
+    font-size: 16px;
+    padding: 0.5rem; /* Espaciado interno de las celdas */
+    text-align: left; /* Alineación del texto */
+}
+
+#carrito-tabla td:first-child {
+    width: 90%; /* Ancho de la columna de productos */
+}
+
+#carrito-tabla td:last-child {
+    width: 100%; /* Ancho de la columna de precios */
+    text-align: right; /* Alinea los precios a la derecha */
+}
+
+/* Estilo para la fila del total */
+.total-row td {
+    font-weight: bold; /* Aplica negrita a las celdas de la fila total */
+}
+
+
+/*popup*/
+
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+
+/*Boton Eliminar*/
+
+
+.btn-eliminar {
+    background-color: rgb(59, 59, 59); /* Fondo negro */
+    color: rgb(214, 214, 214); /* Texto en gris */
+    border: none; /* Sin bordes */
+    border-radius: 20%; /* Forma circular */
+    width: 24px; /* Tamaño del botón */
+    height: 24px;
+    font-size: 18px; /* Tamaño de la "x" */
+    cursor: pointer; /* Cambiar el cursor al pasar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: rgb(180, 14, 14); /* Fondo gris al pasar el mouse */
+    color: rgb(214, 214, 214); /* Texto negro al pasar el mouse */
+}
+
+
+
+/*BOTON CONFIRMACION*/
+
+.carrito-actions {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    margin-top: 50px; /* Agrega un poco de espacio arriba del botón */
+}
+
+#confirmar-pedido {
+    padding: 10px 20px;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirmar-pedido:hover {
+    background-color: #133eda; /* Efecto hover */
+}
+
+
